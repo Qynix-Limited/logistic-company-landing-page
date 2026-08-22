@@ -1,0 +1,7 @@
+export { Hero } from "./hero"
+export { HowItWorks } from "./how-it-works"
+export { CustomerApp } from "./customer-app"
+export { RiderApp } from "./rider-app"
+export { AdminPanel } from "./admin-panel"
+export { Download } from "./download"
+export { ContactForm } from "./contact-form"
