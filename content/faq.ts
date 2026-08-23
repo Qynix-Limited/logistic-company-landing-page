@@ -63,12 +63,12 @@ export const faqCategories: FaqCategory[] = [
       {
         question: "What payment methods do you accept?",
         answer:
-          "Card, bank transfer and your QynixFleet wallet. Merchants can also enable pay-per-delivery so the recipient pays the rider on arrival.",
+          "Card, bank transfer and your FIAMOVE wallet. Merchants can also enable pay-per-delivery so the recipient pays the rider on arrival.",
       },
       {
         question: "Do you charge a subscription fee?",
         answer:
-          "No. QynixFleet is free to join for merchants, individuals and riders. We take a small commission per completed delivery, which is shown in your business summary.",
+          "No. FIAMOVE is free to join for merchants, individuals and riders. We take a small commission per completed delivery, which is shown in your business summary.",
       },
       {
         question: "How do refunds work?",

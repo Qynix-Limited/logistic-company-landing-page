@@ -12,7 +12,7 @@ export const aboutPage = {
   title: "Built for the people",
   titleAccent: "who move the city.",
   description:
-    "QynixFleet started with a simple observation: the merchants driving Nigeria's social commerce boom were running logistics out of WhatsApp threads and phone calls. We thought they deserved better.",
+    "FIAMOVE started with a simple observation: the merchants driving Nigeria's social commerce boom were running logistics out of WhatsApp threads and phone calls. We thought they deserved better.",
 }
 
 export const aboutStory = {
@@ -21,7 +21,7 @@ export const aboutStory = {
   titleAccent: "a real dispatch network.",
   paragraphs: [
     "Thousands of sellers build entire businesses on Instagram and WhatsApp. When an order comes in, the hard part is not the sale — it is finding a rider who will show up, agreeing a fare, and hoping the package arrives.",
-    "We built QynixFleet to replace that scramble. AI matching finds the nearest verified rider in seconds, pricing is fixed before you confirm, and every package is trackable from pickup to doorstep.",
+    "We built FIAMOVE to replace that scramble. AI matching finds the nearest verified rider in seconds, pricing is fixed before you confirm, and every package is trackable from pickup to doorstep.",
     "Riders get the other half of the deal: full control of when they work, jobs they can see before accepting, and earnings that settle the moment a delivery completes.",
   ],
 }

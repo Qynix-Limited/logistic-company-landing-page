@@ -1,6 +1,6 @@
-# QynixFleet — Landing Page
+# FIAMOVE — Landing Page
 
-Marketing site for QynixFleet, built with Next.js 16 (App Router), React 19,
+Marketing site for FIAMOVE, built with Next.js 16 (App Router), React 19,
 Tailwind CSS v4 and shadcn/ui. Light and dark mode throughout.
 
 ## Getting started

@@ -147,7 +147,7 @@ export default function AboutPage() {
           </h2>
           <p className="max-w-md text-pretty text-muted-foreground">
             Download the app, or talk to us about putting your whole store on
-            QynixFleet.
+            FIAMOVE.
           </p>
           <div className="mt-2 flex flex-wrap justify-center gap-3">
             <Button size="lg" className="rounded-full" asChild>
