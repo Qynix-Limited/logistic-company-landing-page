@@ -47,7 +47,7 @@ export function SiteFooter() {
 
         <div className="flex flex-col items-center justify-between gap-4 text-center text-sm text-muted-foreground sm:flex-row sm:text-left">
           <p>
-            &copy; {new Date().getFullYear()} {siteConfig.name} Ltd. All rights
+            &copy; {new Date().getFullYear()} {siteConfig.legalName}. All rights
             reserved.
           </p>
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-5">

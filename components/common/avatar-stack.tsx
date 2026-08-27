@@ -11,7 +11,7 @@ export function AvatarStack({
       {initials.map((name) => (
         <span
           key={name}
-          className="grid size-7 place-items-center rounded-full border-2 border-background bg-brand-600 text-[0.625rem] font-semibold text-white"
+          className="grid size-7 place-items-center rounded-full border-2 border-background bg-primary text-[0.625rem] font-semibold text-white"
         >
           {name}
         </span>

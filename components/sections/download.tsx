@@ -19,7 +19,7 @@ export function Download() {
           <h2 className="text-3xl font-bold tracking-tight text-balance sm:text-4xl">
             {download.title}
             <br />
-            <span className="text-brand-500">{download.titleAccent}</span>
+            <span className="text-brand-accent">{download.titleAccent}</span>
           </h2>
           <p className="max-w-sm text-base text-pretty text-muted-foreground">
             {download.description}
@@ -63,9 +63,9 @@ function AppTile({
   return (
     <Link
       href={href}
-      className="flex flex-col gap-3 rounded-xl border border-border p-5 transition-colors hover:border-brand-500/40"
+      className="flex flex-col gap-3 rounded-xl border border-border p-5 transition-colors hover:border-brand-accent/40"
     >
-      <IconBadge icon={icon} variant="solid" className="bg-brand-600" />
+      <IconBadge icon={icon} variant="solid" className="bg-primary" />
       <div className="flex flex-col gap-1">
         <p className="text-sm font-semibold">{name}</p>
         <p className="text-xs text-pretty text-muted-foreground">
@@ -73,7 +73,7 @@ function AppTile({
         </p>
       </div>
       {showAudience ? (
-        <span className="eyebrow text-brand-500">{audience}</span>
+        <span className="eyebrow text-brand-accent">{audience}</span>
       ) : null}
     </Link>
   )

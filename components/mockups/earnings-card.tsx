@@ -40,7 +40,7 @@ export function EarningsCard({
                 <div
                   className={cn(
                     "w-full rounded-t-sm",
-                    bar.value === peak ? "bg-brand-500" : "bg-muted"
+                    bar.value === peak ? "bg-brand-accent" : "bg-muted"
                   )}
                   style={{ height: `${bar.value}%` }}
                 />

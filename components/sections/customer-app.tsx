@@ -9,7 +9,7 @@ export function CustomerApp() {
           <Eyebrow>{customerApp.eyebrow}</Eyebrow>
           <h2 className="text-3xl font-bold tracking-tight text-balance sm:text-4xl lg:text-5xl">
             {customerApp.title}{" "}
-            <span className="text-brand-500">{customerApp.titleAccent}</span>{" "}
+            <span className="text-brand-accent">{customerApp.titleAccent}</span>{" "}
             {customerApp.titleRest}
           </h2>
         </div>
@@ -23,7 +23,7 @@ export function CustomerApp() {
           <FeatureCard
             key={feature.title}
             {...feature}
-            className={index < 2 ? "bg-brand-500/5" : undefined}
+            className={index < 2 ? "bg-brand-accent/5" : undefined}
           />
         ))}
       </div>

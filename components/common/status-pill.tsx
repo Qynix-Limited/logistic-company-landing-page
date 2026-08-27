@@ -12,7 +12,7 @@ const statusPillVariants = cva(
         success: "bg-success/12 text-success",
         warning: "bg-warning/12 text-warning",
         neutral: "bg-muted text-muted-foreground",
-        brand: "bg-brand-500/12 text-brand-500",
+        brand: "bg-brand-accent/12 text-brand-accent",
       },
     },
     defaultVariants: { tone: "neutral" },

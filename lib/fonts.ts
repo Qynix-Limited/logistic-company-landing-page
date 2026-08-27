@@ -1,18 +1,13 @@
-import { Geist_Mono, Inter, Plus_Jakarta_Sans } from "next/font/google"
+import { Geist, Geist_Mono } from "next/font/google"
 
 /**
- * These variables are attached to `<html>` in app/layout.tsx so `:root` and every
- * descendant can resolve them. `@theme inline` in globals.css composes them into
- * the font-sans / font-display / font-mono utilities with real fallback stacks.
+ * Geist Sans + Geist Mono, matching the FIAMOVE console so type is shared
+ * across the product. These variables are attached to `<html>` in
+ * app/layout.tsx so `:root` and every descendant can resolve them; `@theme
+ * inline` in globals.css composes them into the font utilities with fallbacks.
  */
-export const fontSans = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-})
-
-export const fontDisplay = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
+export const fontSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
   display: "swap",
 })
@@ -23,8 +18,4 @@ export const fontMono = Geist_Mono({
   display: "swap",
 })
 
-export const fontVariables = [
-  fontSans.variable,
-  fontDisplay.variable,
-  fontMono.variable,
-].join(" ")
+export const fontVariables = [fontSans.variable, fontMono.variable].join(" ")

@@ -1,4 +1,5 @@
-import { ArrowRightIcon, ListIcon, TriangleIcon } from "lucide-react"
+import Image from "next/image"
+import { ArrowRightIcon, ListIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { siteConfig } from "@/config/site"
@@ -16,12 +17,13 @@ export function AdminDashboard({
   return (
     <Card className={cn("gap-0 p-0", className)} {...props}>
       <div className="flex items-center gap-3 border-b border-border px-5 py-3.5">
-        <span
-          aria-hidden
-          className="grid size-5 place-items-center rounded bg-brand-600 text-white"
-        >
-          <TriangleIcon className="size-2.5 fill-current" />
-        </span>
+        <Image
+          src="/images/fiamove-mark.png"
+          alt=""
+          width={301}
+          height={256}
+          className="h-4 w-auto"
+        />
         <span className="text-sm font-semibold">{siteConfig.name} Admin</span>
         <span className="font-mono text-xs text-muted-foreground">
           / Dashboard
@@ -39,7 +41,7 @@ export function AdminDashboard({
             <div className="flex flex-col gap-0.5">
               <p className="text-xl font-bold tracking-tight">{stat.value}</p>
               <p className="text-xs text-muted-foreground">{stat.label}</p>
-              <p className="font-mono text-[0.625rem] text-brand-500">
+              <p className="font-mono text-[0.625rem] text-brand-accent">
                 {stat.delta}
               </p>
             </div>
@@ -53,7 +55,7 @@ export function AdminDashboard({
           <span className="text-xs font-semibold">Live Deliveries</span>
           <button
             type="button"
-            className="ml-auto flex items-center gap-1 text-xs text-brand-500 transition-colors hover:text-brand-400"
+            className="ml-auto flex items-center gap-1 text-xs text-brand-accent transition-colors hover:text-brand-accent"
           >
             View All
             <ArrowRightIcon className="size-3" />

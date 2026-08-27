@@ -32,14 +32,14 @@ export default function ContactPage() {
               {...(channel.external
                 ? { target: "_blank", rel: "noreferrer" }
                 : {})}
-              className="group flex flex-col gap-3 rounded-xl border border-border p-5 transition-colors hover:border-brand-500/40"
+              className="group flex flex-col gap-3 rounded-xl border border-border p-5 transition-colors hover:border-brand-accent/40"
             >
               <IconBadge icon={channel.icon} />
               <h2 className="text-sm font-semibold">{channel.title}</h2>
               <p className="flex-1 text-sm text-pretty text-muted-foreground">
                 {channel.description}
               </p>
-              <span className="flex items-center gap-1 text-sm font-medium text-brand-500">
+              <span className="flex items-center gap-1 text-sm font-medium text-brand-accent">
                 {channel.action}
                 <ArrowUpRightIcon className="size-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </span>

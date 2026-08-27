@@ -50,7 +50,9 @@ export default function AboutPage() {
             <Eyebrow>{aboutStory.eyebrow}</Eyebrow>
             <h2 className="text-3xl font-bold tracking-tight text-balance sm:text-4xl">
               {aboutStory.title}{" "}
-              <span className="text-brand-500">{aboutStory.titleAccent}</span>
+              <span className="text-brand-accent">
+                {aboutStory.titleAccent}
+              </span>
             </h2>
           </div>
           <div className="flex flex-col gap-5">
@@ -103,7 +105,7 @@ export default function AboutPage() {
           {aboutMilestones.map((milestone) => (
             <li key={milestone.year}>
               <Card className="h-full gap-3 p-5">
-                <span className="font-mono text-sm font-medium text-brand-500">
+                <span className="font-mono text-sm font-medium text-brand-accent">
                   {milestone.year}
                 </span>
                 <span className="h-px w-full bg-border" />
@@ -127,7 +129,7 @@ export default function AboutPage() {
           {aboutTeam.map((member) => (
             <li key={member.name}>
               <Card className="h-full items-center gap-3 p-6 text-center">
-                <span className="grid size-12 place-items-center rounded-full bg-brand-600 text-sm font-semibold text-white">
+                <span className="grid size-12 place-items-center rounded-full bg-primary text-sm font-semibold text-white">
                   {member.initials}
                 </span>
                 <div className="flex flex-col gap-0.5">

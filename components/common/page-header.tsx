@@ -35,7 +35,7 @@ export function PageHeader({
           {titleAccent ? (
             <>
               {" "}
-              <span className="text-brand-500">{titleAccent}</span>
+              <span className="text-brand-accent">{titleAccent}</span>
             </>
           ) : null}
         </h1>

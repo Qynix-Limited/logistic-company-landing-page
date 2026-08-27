@@ -14,7 +14,7 @@ export function RiderApp() {
             {riderApp.title[0]}
             <br />
             {riderApp.title[1]}{" "}
-            <span className="text-brand-500">{riderApp.title[2]}</span>
+            <span className="text-brand-accent">{riderApp.title[2]}</span>
           </h2>
           <p className="text-base text-pretty text-muted-foreground">
             {riderApp.description}

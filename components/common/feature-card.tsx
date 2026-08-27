@@ -16,7 +16,7 @@ export function FeatureCard({
   return (
     <Card
       className={cn(
-        "gap-4 p-5 transition-colors hover:border-brand-500/40",
+        "gap-4 p-5 transition-colors hover:border-brand-accent/40",
         className
       )}
       {...props}

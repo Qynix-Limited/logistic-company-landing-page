@@ -33,7 +33,7 @@ export default function FaqPage() {
             <Link
               key={category.id}
               href={`#${category.id}`}
-              className="rounded-full border border-border px-4 py-1.5 text-sm text-muted-foreground transition-colors hover:border-brand-500/50 hover:text-foreground"
+              className="rounded-full border border-border px-4 py-1.5 text-sm text-muted-foreground transition-colors hover:border-brand-accent/50 hover:text-foreground"
             >
               {category.title}
             </Link>

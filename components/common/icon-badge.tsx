@@ -8,7 +8,7 @@ const iconBadgeVariants = cva(
   {
     variants: {
       variant: {
-        brand: "bg-brand-500/10 text-brand-500",
+        brand: "bg-brand-accent/10 text-brand-accent",
         muted: "bg-muted text-muted-foreground",
         solid: "bg-primary text-primary-foreground",
       },

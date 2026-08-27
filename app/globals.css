@@ -8,12 +8,10 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans:
-    var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI",
     sans-serif;
-  --font-display:
-    var(--font-jakarta), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-heading:
-    var(--font-jakarta), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono:
     var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
   --color-sidebar-ring: var(--sidebar-ring);
@@ -137,8 +135,24 @@
     @apply font-display;
   }
 }
-
-/* Brand layer — change the --brand-* ramp and the whole site follows. */
+/*
+ * Brand layer — derived from the fiamove logo lockup
+ * (public/images/fiamovelogo.png), sampled directly off the mark:
+ * azure #0070FC (brand-500) and amber #FEA503 (amber-500). brand-600 and
+ * amber-600 are a hair darker than the logo so white-on-primary and accent
+ * text clear WCAG AA on the light surface; the logo steps stay exact for
+ * fills and the mark itself.
+ * --primary, --ring and --brand-accent derive from it.
+ *
+ * Three separations are deliberate — do not let them converge:
+ *   1. --primary (azure, hue 259) vs --destructive (red, hue 28). The console
+ *      hit this: when they matched, Delete and Confirm looked identical.
+ *   2. --accent-brand (amber, hue ~71) vs --warning (orange, hue ~49-55).
+ *      The logo amber sits almost on top of a typical warning yellow, so
+ *      warning is pushed toward orange to stay readable as a status.
+ *   3. In dark mode --primary-foreground is dark ink, not white: white on the
+ *      dark-mode azure reaches only ~3.4:1, this ink reaches ~7:1.
+ */
 
 @theme inline {
   --color-brand-50: var(--brand-50);
@@ -153,59 +167,116 @@
   --color-brand-900: var(--brand-900);
   --color-brand-950: var(--brand-950);
 
+  --color-amber-400: var(--amber-400);
+  --color-amber-500: var(--amber-500);
+  --color-amber-600: var(--amber-600);
+
+  /* Theme-aware pair: the step that reads correctly on the current surface.
+     Use these for accent text and icons instead of a fixed step, which only
+     works in one theme. */
+  --color-brand-accent: var(--brand-accent);
+  --color-accent-brand: var(--accent-brand);
+
+  --color-primary-muted: var(--primary-muted);
   --color-success: var(--success);
   --color-success-foreground: var(--success-foreground);
+  --color-success-muted: var(--success-muted);
   --color-warning: var(--warning);
   --color-warning-foreground: var(--warning-foreground);
+  --color-warning-muted: var(--warning-muted);
   --color-info: var(--info);
   --color-info-foreground: var(--info-foreground);
+  --color-info-muted: var(--info-muted);
 }
 
 :root {
-  --brand-50: oklch(0.971 0.013 17.38);
-  --brand-100: oklch(0.936 0.032 17.717);
-  --brand-200: oklch(0.885 0.062 18.334);
-  --brand-300: oklch(0.808 0.114 19.571);
-  --brand-400: oklch(0.704 0.191 22.216);
-  --brand-500: oklch(0.637 0.237 25.331);
-  --brand-600: oklch(0.577 0.245 27.325);
-  --brand-700: oklch(0.505 0.213 27.518);
-  --brand-800: oklch(0.444 0.177 26.899);
-  --brand-900: oklch(0.396 0.141 25.723);
-  --brand-950: oklch(0.258 0.092 26.042);
+  --brand-50: oklch(0.976 0.012 254);
+  --brand-100: oklch(0.954 0.0222 254.39);
+  --brand-200: oklch(0.905 0.045 255);
+  --brand-300: oklch(0.8 0.1 256);
+  --brand-400: oklch(0.6876 0.1667 255.8);
+  --brand-500: oklch(0.5803 0.2256 259.06);
+  --brand-600: oklch(0.56 0.218 259);
+  --brand-700: oklch(0.5 0.2 260);
+  --brand-800: oklch(0.44 0.175 260);
+  --brand-900: oklch(0.375 0.135 260);
+  --brand-950: oklch(0.2416 0.0631 258.45);
 
-  --success: oklch(0.596 0.145 163);
-  --success-foreground: oklch(0.985 0 0);
-  --warning: oklch(0.666 0.179 58);
-  --warning-foreground: oklch(0.985 0 0);
-  --info: oklch(0.588 0.158 254);
-  --info-foreground: oklch(0.985 0 0);
+  --amber-400: oklch(0.8268 0.1588 77.25);
+  --amber-500: oklch(0.7916 0.1701 70.92);
+  --amber-600: oklch(0.555 0.145 70.92);
+
+  /* Light surfaces */
+  --background: oklch(0.9789 0.0025 254);
+  --foreground: oklch(0.2092 0.0061 271.12);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2092 0.0061 271.12);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2092 0.0061 271.12);
+  --secondary: oklch(0.9734 0.0013 286.38);
+  --secondary-foreground: oklch(0.2092 0.0061 271.12);
+  --muted: oklch(0.9557 0.0027 286.35);
+  --muted-foreground: oklch(0.5357 0.0127 274.73);
+  --accent: oklch(0.9437 0.0027 286.35);
+  --accent-foreground: oklch(0.2092 0.0061 271.12);
+  --destructive: oklch(0.5806 0.2223 27.81);
+  --border: oklch(0.9197 0.004 286.32);
+  --input: oklch(0.9197 0.004 286.32);
 
   --primary: var(--brand-600);
-  --primary-foreground: oklch(0.985 0 0);
-  --ring: var(--brand-500);
+  --primary-foreground: oklch(1 0 0);
+  --primary-muted: var(--brand-100);
+  --brand-accent: var(--brand-600);
+  --accent-brand: var(--amber-600);
+  --ring: var(--brand-600);
+
+  --success: oklch(0.6272 0.1697 149.17);
+  --success-foreground: oklch(1 0 0);
+  --success-muted: oklch(0.9625 0.0198 159.76);
+  --warning: oklch(0.5553 0.1455 49);
+  --warning-foreground: oklch(1 0 0);
+  --warning-muted: oklch(0.968 0.0265 70);
+  --info: oklch(0.5491 0.1693 256.08);
+  --info-foreground: oklch(1 0 0);
+  --info-muted: oklch(0.9447 0.0212 252.5);
+
+  --radius: 0.75rem;
 }
 
 .dark {
-  --background: oklch(0.135 0 0);
-  --card: oklch(0.178 0 0);
-  --popover: oklch(0.178 0 0);
-  --secondary: oklch(0.235 0 0);
-  --muted: oklch(0.225 0 0);
-  --accent: oklch(0.235 0 0);
-  --border: oklch(1 0 0 / 8%);
-  --input: oklch(1 0 0 / 12%);
+  /* Dark surfaces */
+  --background: oklch(0.1682 0.0045 264.45);
+  --foreground: oklch(0.9704 0.0013 286.38);
+  --card: oklch(0.2092 0.0061 271.12);
+  --card-foreground: oklch(0.9704 0.0013 286.38);
+  --popover: oklch(0.2442 0.0077 274.63);
+  --popover-foreground: oklch(0.9704 0.0013 286.38);
+  --secondary: oklch(0.2442 0.0077 274.63);
+  --secondary-foreground: oklch(0.9704 0.0013 286.38);
+  --muted: oklch(0.2442 0.0077 274.63);
+  --muted-foreground: oklch(0.6933 0.0104 273.3);
+  --accent: oklch(0.2733 0.0075 274.68);
+  --accent-foreground: oklch(0.9704 0.0013 286.38);
+  --destructive: oklch(0.6371 0.2104 28.54);
+  --border: oklch(0.2733 0.0075 274.68);
+  --input: oklch(0.2733 0.0075 274.68);
 
-  --success: oklch(0.75 0.165 163);
-  --success-foreground: oklch(0.16 0.03 163);
-  --warning: oklch(0.79 0.16 66);
-  --warning-foreground: oklch(0.19 0.03 66);
-  --info: oklch(0.72 0.14 254);
-  --info-foreground: oklch(0.16 0.03 254);
-
-  --primary: var(--brand-500);
-  --primary-foreground: oklch(0.985 0 0);
+  --primary: var(--brand-400);
+  --primary-foreground: oklch(0.2416 0.0631 258.45);
+  --primary-muted: var(--brand-950);
+  --brand-accent: var(--brand-400);
+  --accent-brand: var(--amber-400);
   --ring: var(--brand-400);
+
+  --success: oklch(0.7459 0.1812 152.33);
+  --success-foreground: oklch(0.2587 0.0439 157.01);
+  --success-muted: oklch(0.2587 0.0439 157.01);
+  --warning: oklch(0.78 0.155 55);
+  --warning-foreground: oklch(0.2698 0.0451 55);
+  --warning-muted: oklch(0.2698 0.0451 55);
+  --info: oklch(0.6376 0.1581 253.5);
+  --info-foreground: oklch(0.2542 0.0494 256.37);
+  --info-muted: oklch(0.2542 0.0494 256.37);
 }
 
 @layer base {
