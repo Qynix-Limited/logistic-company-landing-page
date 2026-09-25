@@ -4,6 +4,7 @@ import {
   Download,
   Hero,
   HowItWorks,
+  Merchants,
   RiderApp,
 } from "@/components/sections"
 
@@ -14,6 +15,7 @@ export default function HomePage() {
       <HowItWorks />
       <CustomerApp />
       <RiderApp />
+      <Merchants />
       <AdminPanel />
       <Download />
     </>

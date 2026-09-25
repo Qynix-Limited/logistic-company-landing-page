@@ -6,6 +6,7 @@ export const mainNav: NavItem[] = [
   { title: "How It Works", href: "/#how-it-works" },
   { title: "Features", href: "/#features" },
   { title: "For Riders", href: "/#riders" },
+  { title: "For Business", href: "/#business" },
   { title: "About", href: "/about" },
   { title: "FAQ", href: "/faq" },
 ]
@@ -16,6 +17,7 @@ export const footerNav: FooterColumn[] = [
     items: [
       { title: "Customer App", href: "/#features" },
       { title: "Rider App", href: "/#riders" },
+      { title: "For Business", href: "/#business" },
       { title: "Admin Panel", href: "/#admin" },
       { title: "Download", href: "/#download" },
     ],
