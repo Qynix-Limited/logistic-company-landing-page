@@ -14,9 +14,9 @@ export const merchants = {
   description: `Vendors, stores and logistics companies get a console of their own on ${siteConfig.name} — dispatch deliveries, onboard your riders, and see every order and naira in one place.`,
   cta: "Register your business",
   ctaNote: "Free to register. A FIAMOVE admin reviews every business.",
-  /** Sends people to the console app, which owns registration and sessions. */
-  ctaHref: `${siteConfig.consoleUrl}/signup`,
-  signInHref: `${siteConfig.consoleUrl}/login`,
+  /** Sends people to the portal app, which owns registration and sessions. */
+  ctaHref: `${siteConfig.portalUrl}/signup`,
+  signInHref: `${siteConfig.portalUrl}/login`,
 }
 
 export const merchantFeatures: Feature[] = [

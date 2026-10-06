@@ -7,11 +7,11 @@ import { Button } from "@/components/ui/button"
 
 /**
  * The business pitch, and the only place on the marketing site that sends
- * someone into the console.
+ * someone into the portal.
  *
  * The CTA is an outbound link rather than a form: registration creates an
  * account and files a merchant application, both of which belong to the
- * console app that owns auth and sessions. Duplicating that here would mean
+ * portal app that owns auth and sessions. Duplicating that here would mean
  * two implementations of the same signup drifting apart.
  */
 export function Merchants() {
